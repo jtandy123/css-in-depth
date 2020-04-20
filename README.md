@@ -10,7 +10,7 @@ CSS里的C（代表cascade，层叠）
 - 选择器优先级：哪些选择器比另一个选择器更重要。
 - 源码顺序：样式表里的声明顺序。
 
-![cascade-rules][cascade-rules]
+![cascade][cascade-rules]
   
 ### 样式来源
 样式来源（优先级从低到高）：
