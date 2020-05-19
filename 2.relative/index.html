@@ -6,12 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>relative</title>
   <style>
+    /*
     :root {
-      font-size: 0.875em;
+      font-size: 0.75rem;
+    }
+
+    @media (min-width: 800px) {
+      :root {
+        font-size: 0.875em;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      :root {
+        font-size: 1em;
+      }
+    }
+    */
+    :root {
+      font-size: calc(0.5em + 1vw);
     }
 
     body {
-      font-size: 1rem;
+      font-size: 1rem; /* 12px, 先计算出根元素的字号是多少px，然后再计算当前元素的字号 */
     }
 
     .slogan {
@@ -43,6 +60,7 @@
     } */
 
     .panel {
+      font-size: 1rem;
       padding: 1em;
       border-radius: 0.5em;
       border: 1px solid #999;
@@ -53,6 +71,16 @@
       font-size: 0.8rem;
       font-weight: bold;
       text-transform: uppercase;
+    }
+
+    .panel.large {
+      font-size: 1.2rem;
+    }
+
+    .square {
+      width: 90vmin;
+      height: 90vmin;
+      background-color: #369;
     }
   </style>
 </head>
@@ -91,6 +119,18 @@
       potential.
     </div>
   </div>
+
+  <div class="panel large">
+    <h2>Single-origin</h2>
+    <div class="panel-body">
+      We have built partnerships with small farms around the world to
+      hand-select beans at the peak of season. We then carefully roast
+      in <a href="/batch-size">small batches</a> to maximize their
+      potential.
+    </div>
+  </div>
+
+  <div class="square"></div>
 </body>
 
 </html>
